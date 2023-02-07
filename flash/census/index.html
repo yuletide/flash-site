@@ -6,6 +6,27 @@
       AC_FL_RunContent = 0;
     </script>
     <script src="AC_RunActiveContent.js" language="javascript"></script>
+    <style>
+      body {
+        background-color: #c4c4c4;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+
+      h1 {
+        font-size: large;
+      }
+
+      .select {
+        /* padding: 0.5rem; */
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        width: 600px;
+      }
+      .select p {
+        font-size: 1rem;
+      }
+    </style>
   </head>
   <body bgcolor="#c4c4c4">
     <!--url's used in the movie-->
@@ -82,15 +103,30 @@
 	</object>
 </noscript> -->
     <div id="container" style="width: 800px; height: 600px"></div>
-    <div>
+    <div class="select">
+      <h1>Historical US Census Data: Black Population Change 1960-2000.</h1>
       <label>Select a City:</label>
       <select id="citySelect" onchange="onSelect(this)">
+        <option value="COPYPASTE">All</option>
         <option value="Atlanta">Atlanta</option>
         <option value="Boston">Boston</option>
         <option value="Chicago">Chicago</option>
         <option value="Detroit" selected>Detroit</option>
         <option value="LA">Los Angeles</option>
+        <option value="NewYork">New York</option>
+        <option value="CITYLOADER">Loading Screen</option>
       </select>
+      <p>
+        This series of time-lapse maps depict the changing racial landscape of
+        six major U.S. cities using dicennial census data over the period
+        1960-2000.
+      </p>
+      <p>
+        Note: All fading values are interpolated which obscures any
+        inter-decadal modulations in growth rate. Data for these maps were
+        obtained through the
+        <a href="https://www.nhgis.org/">National Historic GIS</a>.
+      </p>
     </div>
   </body>
 </html>
